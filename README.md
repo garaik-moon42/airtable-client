@@ -29,7 +29,7 @@ dependencies {
 
 ## Usage
 
-First, you have to initialize the client with a base ID and an airtable token.
+First, you have to initialize the client with a base ID and an airtable token. 
 
 ```kotlin
 fun main() {
@@ -42,8 +42,12 @@ fun main() {
 }
 ```
 
+After you can read any table data and deserialize it into objects with ``fetchAirtableData``. For now it reads **all data** from the given table so use it carefully.
+
 Information about how you can get an airtable base id or table id can be found [here](https://support.airtable.com/docs/finding-airtable-ids#finding-base-table-and-view-ids-from-urls).
 
 [Here](https://support.airtable.com/docs/creating-personal-access-tokens) you can find how to create an access token to Airtable API.
+
+[Reference](https://support.airtable.com/docs/airtable-web-api-using-filterbyformula-or-sort-parameters) of using filter formulas in Airtable API.
 
 The data fetched from Airtable will be deserialized into instances of ``targetClass`` using [GSON](https://github.com/google/gson).  
